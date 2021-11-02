@@ -5,7 +5,7 @@ if(process.env.NODE_ENV != 'production') {
 const express = require("express");
 const cors = require("cors");
 const routes = require("./routes");
-const port = process.ENV.PORT || 3001;
+const PORT = process.env.PORT || 3001;
 require('dotenv').config();
 
 const app = express();
@@ -16,8 +16,8 @@ app.use(express.urlencoded({ extended: true, limit: "50mb" }));
 
 app.use("/", routes);
 
-app.listen(port, () => {
-  console.log(`app running on ${port}`);
+app.listen(PORT, () => {
+  console.log(`app running on ${PORT}`);
 });
 
 module.exports = app;
