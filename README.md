@@ -1,5 +1,4 @@
-# elemes-test
-Elemes Course Admin and Client API
+# Course Admin and Client API
 
 # How to run
 - run npm install to install the dependencies
